@@ -15,14 +15,14 @@
 
 ****
 
-## <a name="Usage">Usage</a>
+## <a name="Usage">はじめに</a>
 
 Class.jsを読み込みます 
 
         <script type="text/javascript" src="/path/to/Class.js"></script>
 
 
-## <a name="TheAPI">The API</a>
+## <a name="TheAPI">提供するAPI</a>
 
 Class.jsが提供するAPI
 
