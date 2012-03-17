@@ -28,12 +28,16 @@
         var that = this, key;
         for (key in apis) {
             this.Klass.prototype[key] = apis[key];
-            this.Wrapper.prototype[key] = (function (key) {
-                return function () {
-                    var args = Array.prototype.slice.call(arguments);
-                    that.instance[key].apply(that.instance, args);
-                }
-            }(key));
+            if (typeof apis[key] === 'function') {
+                this.Wrapper.prototype[key] = (function (key) {
+                    return function () {
+                        var args = Array.prototype.slice.call(arguments);
+                        that.instance[key].apply(that.instance, args);
+                    }
+                }(key));
+            } else {
+                this.Wrapper.prototype[key] = apis[key];
+            }
         }
         return this;
     };
