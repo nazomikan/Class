@@ -53,7 +53,7 @@
   };
 
   Class.prototype.private = function (apis) {
-      var that = this, key;
+      var key;
       for (key in apis) {
           this.Klass.prototype[key] = apis[key];
       }
