@@ -4,7 +4,7 @@
 
 アクセス修飾子(public/private)をもったクラスライクな構文を提供してくれます
 
-そのうち継承とかコンストラクタ引数とかにも対応します。
+そのうち継承とかにも対応します。
 そのうち。
 
 ****
@@ -34,8 +34,8 @@ Class.jsが提供するAPI
 ## <a name="Howto">使い方</a>
 こんなかんじ
 
-    Class(function () {
-        this.name = "tarou"
+    Class(function (name) {
+        this.name = name;
     }).export(
         "HogeClass"
     ).public({
@@ -51,7 +51,7 @@ Class.jsが提供するAPI
         }
     });
 
-    var hoge = new HogeClass();
+    var hoge = new HogeClass("tarou");
     hoge.getName(); // tarou
     hoge.callPrivateMethod(); // call privateMethod
     hoge.privateMethod(); // reference error
