@@ -19,7 +19,7 @@
 
 Class.jsを読み込みます 
 
-  <script type="text/javascript" src="/path/to/Class.js"></script>
+    <script type="text/javascript" src="/path/to/Class.js"></script>
 
 
 ## <a name="TheAPI">提供するAPI</a>
@@ -35,25 +35,25 @@ Class.jsが提供するAPI
 こんなかんじ
 
     Class(function () {
-            this.name = "tarou"
-        }).export(
-            "HogeClass"
-        ).public({
-            getName: function() {
-                console.log(this.name);
-            },
-            callPrivateMethod: function () {
-                this.privateMethod();
-            }
-        }).private({
-            privateMethod: function () {
-                console.log('call privateMethod')
-            }
-        });
+        this.name = "tarou"
+    }).export(
+        "HogeClass"
+    ).public({
+        getName: function() {
+            console.log(this.name);
+        },
+        callPrivateMethod: function () {
+            this.privateMethod();
+        }
+    }).private({
+        privateMethod: function () {
+            console.log('call privateMethod')
+        }
+    });
 
-        var hoge = new HogeClass();
-        hoge.getName(); // tarou
-        hoge.callPrivateMethod(); // call privateMethod
-        hoge.privateMethod(); // reference error
+    var hoge = new HogeClass();
+    hoge.getName(); // tarou
+    hoge.callPrivateMethod(); // call privateMethod
+    hoge.privateMethod(); // reference error
 
 
