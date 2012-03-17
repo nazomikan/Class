@@ -27,7 +27,7 @@
 
   Class.prototype.export = function (className, address) {
       if (typeof address !== "object") {
-          address = window;
+          address = win;
       }
       address[className] = this.Wrapper;
       return this;
