@@ -21,8 +21,6 @@
           this.__entity__ = new Entity();
           fn.apply(this, args);
       };
-
-      return this;
   }
 
   Class.prototype.export = function (className, address) {
