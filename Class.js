@@ -1,7 +1,7 @@
 (function (win) {
     win.Class = Class;
 
-    Class(fn) {
+    function Class(fn) {
       var that = this;
       if (!(this instanceof Class)) {
           return new Class(fn);
