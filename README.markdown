@@ -19,7 +19,7 @@
 
 Class.jsを読み込みます 
 
-<script type="text/javascript" src="/path/to/Class.js"></script>
+  <script type="text/javascript" src="/path/to/Class.js"></script>
 
 
 ## <a name="TheAPI">提供するAPI</a>
