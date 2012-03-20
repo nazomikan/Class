@@ -27,25 +27,25 @@ Class.jsを読み込みます
 Class.jsが提供するAPI
 
 * `Class` コンストラクタが定義できます
-* `export` クラス名を定義できます(どの名前空間に定義するかを指定することもできます)
-* `public` 公開するAPIを定義することができます
-* `private` 非公開なAPIを定義することができます
+* `release` クラス名を定義できます(どの名前空間に定義するかを指定することもできます)
+* `publics` 公開するAPIを定義することができます
+* `privates` 非公開なAPIを定義することができます
 
 ## <a name="Howto">使い方</a>
 こんなかんじ
 
     Class(function (name) {
         this.name = name;
-    }).export(
+    }).release(
         "HogeClass"
-    ).public({
+    ).publics({
         getName: function() {
             console.log(this.name);
         },
         callPrivateMethod: function () {
             this.privateMethod();
         }
-    }).private({
+    }).privates({
         privateMethod: function () {
             console.log('call privateMethod')
         }

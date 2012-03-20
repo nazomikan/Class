@@ -23,7 +23,7 @@
         };
     }
 
-    Class.prototype.export = function (className, address) {
+    Class.prototype.release = function (className, address) {
         if (typeof address !== "object") {
             address = win;
         }
@@ -31,7 +31,7 @@
         return this;
     };
 
-    Class.prototype.public = function (apis) {
+    Class.prototype.publics = function (apis) {
         var that = this, key;
         for (key in apis) {
             if (typeof apis[key] === 'function') {
@@ -50,7 +50,7 @@
         return this;
     };
 
-    Class.prototype.private = function (apis) {
+    Class.prototype.privates = function (apis) {
         var key;
         for (key in apis) {
             this.Klass.prototype[key] = apis[key];
